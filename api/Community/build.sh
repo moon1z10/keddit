@@ -12,3 +12,8 @@ else
     exit 1
 fi
 
+sudo docker stop keddis-community
+sudo docker rm keddis-community
+gradle build -x test
+sudo docker build -t kedditapicommunity:latest .
+sudo docker run -d -p 8082:8082 --name keddis-community kedditapicommunity:latest
