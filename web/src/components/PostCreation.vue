@@ -27,7 +27,7 @@ export default {
     const router = useRouter();
 
     const submitPost = async () => {
-      const baseURL = `${process.env.VUE_APP_API_BASE_URL}:${process.env.VUE_APP_API_USER_COMMUNITY_PORT}`;
+      const baseURL = `${process.env.VUE_APP_API_BASE_URL}:${process.env.VUE_APP_API_COMMUNITY_SERVICE_PORT}`;
       try {
         // console.log(`context: ${context.value}`)
         await axios.post(`${baseURL}/api/community/post`, {

@@ -36,7 +36,7 @@ export default {
   setup() {
     const instance = getCurrentInstance();
     const axios = instance.appContext.config.globalProperties.$axios;
-    const baseURL = `${process.env.VUE_APP_API_BASE_URL}:${process.env.VUE_APP_API_USER_COMMUNITY_PORT}`;
+    const baseURL = `${process.env.VUE_APP_API_BASE_URL}:${process.env.VUE_APP_API_COMMUNITY_SERVICE_PORT}`;
 
     const topics = ref([]); // 초기 상태는 빈 배열
     const showAllTopics = ref(false);
